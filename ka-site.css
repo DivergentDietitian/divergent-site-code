@@ -240,3 +240,6 @@ html body.ka-svc #ka-nobook a.ka-nb-p[href*="calendly"],html body.ka-svc a.ka-nb
 
 /* KA one 30s title v1 (Nov 22): no divider on the lower ka-start panel when its repeated title is hidden */
 #main-content section.ka-start.ka-no30 .ka-start-r{border-top:0 !important;padding-top:0 !important;margin-top:0 !important}
+
+/* Nov 23, 2026 (Kait): ARFID page "Safe foods first" graphic was wider than the text column. Cap it, centered. */
+#main-content div.flow-root:has(img[alt^="Safe foods first"]),div.flow-root:has(img[alt^="Safe foods first"]){max-width:560px!important;margin-left:auto!important;margin-right:auto!important}
