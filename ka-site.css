@@ -1,0 +1,242 @@
+/* contrast fix: deeper green so white text passes WCAG AA */
+html body .ui-button.ui-button-primary{background-color:#047857 !important;border-color:#047857 !important;}
+html body .ui-button.ui-button-primary:hover{background-color:#065f46 !important;border-color:#065f46 !important;}
+[style*="background-color:#049669"]{background-color:#047857 !important;}
+p.opacity-80.text-type-700{opacity:1 !important;}
+/* contrast fix 2: darker green body text, links and card buttons */
+html body .text-type-500{color:#047857 !important}
+html body .text-type-600{color:#065f46 !important}
+html body .prose-user{color:#065f46}
+html body .prose-user.text-type-500, html body .text-type-500 .prose-user{color:#065f46 !important}
+html body a.footer-link{color:#065f46 !important}
+html body .prose-user a, html body a.brand-link{color:#047857 !important}
+html body a.ui-button.ui-button-sm{background-color:#047857 !important}
+html body .ui-button.ui-button-link{color:#047857 !important}
+/* round 4: blog label contrast, footer tap size, skip link */
+html body .listing-featured-label, html body .listing-card-date{opacity:1 !important;color:#065f46 !important}
+html body a.footer-link{display:inline-block;padding-top:4px;padding-bottom:4px}
+.skip-link{position:absolute;left:-9999px;top:0;z-index:9999;background:#fff;color:#065f46;padding:12px 16px;border:2px solid #047857;border-radius:6px;font-weight:600;text-decoration:underline}
+.skip-link:focus{left:16px;top:16px}
+html body .text-canvas\/70{color:#ecfdf5 !important}
+/* color consistency: one green family */
+html body .prose-user strong, html body .prose strong{color:inherit !important}
+html body a.ui-button.ui-button-outline{background:transparent !important;border-color:transparent !important;box-shadow:none !important;color:#047857 !important}
+html body a.ui-button.ui-button-outline::after{content:" \2192";content:" \2192" / "";margin-left:.25em}
+#kait-video > div{background:#ecfdf5 !important}
+#kait-video figcaption{color:#065f46 !important}
+html body .article-meta, html body .article-back, html body .article-sources h3{opacity:1 !important;color:#065f46 !important}
+html body .article-callout--info{background:rgba(4,120,87,.08) !important;border-left-color:#047857 !important}
+html body .article-callout--info .article-callout-label{color:#047857 !important}
+html body .article-tag{opacity:1 !important;background-color:#047857 !important;color:#ffffff !important}
+html body .listing-subtitle, html body .article-kv-label{opacity:1 !important;color:#065f46 !important}
+html body .article-callout--warning .article-callout-label{color:#7a5200 !important}
+/* phones: keep site name beside the logo */
+@media (max-width:639px){html body ile-root a.flex.items-center.flex-wrap{flex-wrap:nowrap !important;column-gap:.5rem !important} html body ile-root a.flex.items-center p.font-sans.font-bold{font-size:20px !important;line-height:1.15 !important}}
+/* specialty cards: buttons line up along the bottom */
+html body dl.col-span-2 > div.flex-col:has(img) > div:last-child:has(> a.ui-button){margin-top:auto !important;padding-top:.5rem}
+/* hero name card: keep the whole card visible on big screens */
+@media (min-width:1536px){html body img.rounded-l-3xl.\32xl\:h-full{height:auto !important;width:100% !important;max-width:720px !important;border-radius:1.5rem !important}}
+/* text cards: soft boxes so the row looks even; button stays under its text */
+html body dl.col-span-2 > div.flex-col:not(:has(img)){background:#ffffff;border:1px solid #d1fae5;border-radius:1.5rem;padding:2rem 1.75rem;box-shadow:0 1px 3px rgba(4,120,87,.06)}
+html body dl.col-span-2 > div.flex-col:not(:has(img)) > div:has(> a.ui-button){order:3;margin-top:auto !important;padding-top:1.5rem}
+html body dl.col-span-2 > div.flex-col:not(:has(img)) > div.pt-6{order:2}
+html body dl.col-span-2 > div.flex-col:not(:has(img)) a.ui-button[href*="insurance"]{background:transparent !important;color:#047857 !important;border:2px solid #047857 !important}
+html body dl.col-span-2 > div.flex-col:not(:has(img)) a.ui-button[href*="insurance"]:hover{background:#ecfdf5 !important}
+/* specialty cards: names sit right above the button */
+html body dl.col-span-2 > div.flex-col:has(img) > .feature-description{flex:1 1 auto;display:flex;flex-direction:column;width:100%;row-gap:1.25rem}
+html body dl.col-span-2 > div.flex-col:has(img) > .feature-description > p{margin:0 !important}
+html body dl.col-span-2 > div.flex-col:has(img) > .feature-description > p:last-child{margin-top:auto !important}
+
+/* Centered hero graphics: readable size, whole graphic visible (Oct 25, 2026) */
+#hero .flow-root{max-width:46rem;margin-left:auto;margin-right:auto}
+#hero .flow-root>div{aspect-ratio:auto!important}
+#hero .flow-root img{height:auto!important;object-fit:contain!important}
+
+
+/* blog listing: show full 2000x540 covers, no cropping */
+html body .listing-card-image{height:auto!important;aspect-ratio:2000/540;object-fit:contain!important;background:#faf7f2}
+html body .listing-featured{flex-direction:column!important}
+html body .listing-featured-image{width:100%!important;min-height:0!important}
+html body .listing-featured-image img{height:auto!important;aspect-ratio:2000/540;object-fit:contain!important}
+/* Blog search v1 (Oct 26, 2026): search box on /blog that matches titles, tags and full post text */
+.bs-box{max-width:40rem;margin:0 0 1.25rem;position:relative}
+.bs-box input{width:100%;font:inherit;font-size:1.05rem;padding:.8rem 1rem .8rem 2.85rem;border:2px solid #a7f3d0;border-radius:.9rem;background:#fff;color:#064e3b;box-sizing:border-box}
+.bs-box input:focus{outline:none;border-color:#047857;box-shadow:0 0 0 3px rgba(4,120,87,.15)}
+.bs-box::before{content:"\1F50E";position:absolute;left:.95rem;top:50%;transform:translateY(-50%);font-size:1.1rem;pointer-events:none}
+.bs-status{text-align:left;font-size:.95rem;font-weight:600;color:#065f46;margin:-.5rem 0 1rem;min-height:1.4em}
+.bs-empty{display:none;max-width:44rem;margin:0 auto 2rem;background:#fff;border:1px dashed #a7f3d0;border-radius:1rem;padding:1.25rem;text-align:center;color:#064e3b}
+.bs-empty a{color:#047857;font-weight:700}
+.bs-hide{display:none!important}
+/* Read This in 30 Seconds boxes (Oct 26, 2026) */
+.tl30{max-width:52rem;margin:1.5rem auto 2.5rem;padding:0 1rem}.tl30>div{background:#fff;border:1px solid #a7f3d0;border-radius:1rem;padding:1.25rem 1.5rem 1rem;text-align:left}.tl30 h2{font-size:1.15rem!important;line-height:1.4!important;font-weight:700;color:#064e3b;margin:0 0 .5rem!important;padding:0!important;border:0!important}.tl30 ul{list-style:none;margin:0;padding:0}.tl30 li{color:#065f46;font-size:1.0625rem;line-height:1.65;margin:.45rem 0;padding-left:1.9rem;text-indent:-1.9rem}
+/* 30-second box: line up with left-aligned heroes on desktop (Oct 27, 2026) */
+@media (min-width:1024px){.tl30.tl30-left{max-width:none;padding:0}.tl30.tl30-left>div{max-width:52rem;margin-left:var(--tl30x,0)}}
+@media (min-width:640px) and (max-width:1023.98px){.tl30.tl30-left{max-width:none;padding:0}.tl30.tl30-left>div{max-width:calc(100% - 2 * var(--tl30x,0px));margin-left:var(--tl30x,0)}}
+
+/* Nov 10 2026 site review fixes */
+.fq-count{display:none !important}
+html body dl.col-span-2 > div.flex-col:not(:has(img)) a.ui-button[href*="insurance"]{background:#047857 !important;background-color:#047857 !important;color:#fff !important;border-color:#047857 !important}
+
+
+/* Nov 10 2026: mini FAQs */
+.mini-faq{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.mini-faq-item{background:#fff;border:1px solid #a7f3d0;border-radius:10px}
+.mini-faq-item summary{cursor:pointer;list-style:none;padding:12px 44px 12px 16px;font-weight:700;color:#064e3b;position:relative}
+.mini-faq-item summary::-webkit-details-marker{display:none}
+.mini-faq-item summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:1.25rem;color:#047857}
+.mini-faq-item[open] summary::after{content:"\2212"}
+.mini-faq-answer{padding:0 16px 12px}
+.mini-faq-answer p{margin:0 0 8px}
+.mini-faq-more{display:none}
+.mini-faq-open .mini-faq-more{display:block}
+.mini-faq-foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:12px}
+.mini-faq-toggle{background:none;border:2px solid #047857;color:#047857;border-radius:8px;padding:8px 16px;font-weight:700;cursor:pointer}
+.mini-faq-all{color:#047857;font-weight:700;text-decoration:underline}
+.mini-faq-toggle:focus-visible,.mini-faq-item summary:focus-visible{outline:3px solid #047857;outline-offset:2px}
+/* Nov 10 2026: testimonial cards (quote, name on its own indented line) */
+.prose blockquote{background:#fff;border:1px solid #a7f3d0;border-left:6px solid #047857;border-radius:12px;padding:14px 18px;margin:16px 0;font-style:normal;quotes:none}
+.prose blockquote p{margin:0}
+.prose blockquote p::before,.prose blockquote p::after{content:none !important}
+.prose blockquote em{display:block;font-style:normal;font-size:.9em;padding-left:16px;margin-top:6px;color:#065f46}
+/* Nov 10 2026: crisis callout box (left-aligned for readability) */
+p:has(a[href="tel:988"]){background:#fff;border:2px solid #047857;border-left-width:8px;border-radius:12px;padding:16px 20px;margin:24px 0;text-align:left}
+/* Nov 10 2026: free guide links always bold */
+a[href*="free-guides"],a[data-freebie]{font-weight:700}
+
+
+/* Nov 10 2026 round 2: left-aligned heroes (easier to read), 30-second box after buttons on phones */
+#hero .max-w-2xl.text-center{text-align:left;max-width:46rem}
+#hero .max-w-2xl.text-center .justify-center{justify-content:flex-start;flex-wrap:wrap;row-gap:14px}
+#hero aside.tl30{margin-left:0;margin-right:0}
+@media (max-width:640px){#hero .max-w-2xl.text-center{display:flex;flex-direction:column}#hero .max-w-2xl.text-center>aside.tl30{order:9;margin-top:28px}}
+/* bigger footer tap targets and small text */
+#site-footer a.footer-link{display:inline-block;font-size:16px;line-height:24px;padding:10px 0}
+#site-footer p.text-xs{font-size:14px;line-height:1.6}
+.rv-who span,.rv-nav-label{font-size:15px !important}
+.ui-button-xs{font-size:14px !important}
+
+
+/* Nov 15 2026: Reviews show-more removed, every review visible */
+.rv-group .rv-card.rv-hidden{display:revert!important}
+.rv-more{display:none!important}
+
+
+/* Nov 10 2026: free-guides lines become a card with a button */
+.prose p:has(> a[href$="/free-guides"] > strong){background:#fff;border:2px solid #34D399;border-radius:14px;padding:16px 20px;margin:22px 0}
+.prose p:has(> a[href$="/free-guides"] > strong) > a[href$="/free-guides"]{display:table;margin-top:12px;background:#047857;color:#fff !important;text-decoration:none !important;padding:10px 18px;border-radius:10px}
+.prose p:has(> a[href$="/free-guides"] > strong) > a[href$="/free-guides"] strong{color:#fff !important}
+
+
+/* Nov 10 2026: 44px tap targets (header, banner, social icons) + darker social icons */
+.ui-button-nav,.ui-button-xs{min-height:44px;display:inline-flex !important;align-items:center;justify-content:center}
+#site-footer a:has(svg){display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#065F46 !important}
+#site-footer a:has(svg):hover{color:#047857 !important}
+
+
+/* Nov 10 2026: Autism page feature graphics hidden on phones only (their words repeat the section text and were too small to read) */
+@media (max-width:639px){#features .lg\:grid-flow-col-dense img{display:none !important}}
+
+/* Nov 10 2026: For Providers tap targets to 44px */
+nav.ka-jump a{padding-top:11px !important;padding-bottom:11px !important}
+a.ka-cta-link,a.mini-faq-all{padding-top:8px !important;padding-bottom:8px !important}
+
+
+/* Nov 10 2026 · KA boost: skip link, focus, Reviews chips 44px, Start-here picker, sticky phone bar */
+.ka-skip{position:absolute;left:12px;top:-60px;z-index:100;background:#064E3B;color:#fff !important;padding:12px 18px;border-radius:10px;font-weight:600;text-decoration:none}
+.ka-skip:focus{top:12px}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #047857 !important;outline-offset:3px !important;border-radius:6px}
+nav.rv-nav a{padding-top:9px !important;padding-bottom:9px !important}
+#ka-start{max-width:72rem;margin:0 auto;padding:40px 20px 8px;font-family:'Hind Vadodara',sans-serif}
+#ka-sticky a,#ka-start .ka-s{font-family:'Fira Sans',sans-serif}
+#ka-start h2{font-family:'Fira Sans',sans-serif;font-weight:700;font-size:1.75rem;line-height:1.25;color:#064E3B;margin:0 0 6px}
+#ka-start .ka-start-sub{color:#064E3B;margin:0 0 18px;font-size:1.05rem}
+#ka-start .ka-start-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (min-width:768px){#ka-start .ka-start-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+#ka-start .ka-start-grid a{display:flex;flex-direction:column;gap:6px;height:100%;min-height:44px;padding:14px;border-radius:14px;background:#fff;border:2px solid #D1FAE5;text-decoration:none;color:#022C22;transition:border-color .15s,background .15s}
+#ka-start .ka-start-grid a:hover{border-color:#047857;background:#ECFDF5}
+#ka-start .ka-emo{font-size:1.5rem;line-height:1}
+#ka-start .ka-q{font-size:1rem;line-height:1.4}
+#ka-start .ka-s{margin-top:auto;font-weight:700;color:#047857;font-size:.95rem}
+#ka-sticky{display:none}
+@media (max-width:767px){
+  #ka-sticky{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid #D1FAE5;box-shadow:0 -4px 14px rgba(2,44,34,.08);transform:translateY(110%);visibility:hidden;transition:transform .2s,visibility .2s}
+  #ka-sticky.ka-on{transform:none;visibility:visible}
+  #ka-sticky a{flex:1;display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:12px;font-weight:700;font-size:1rem;text-decoration:none;text-align:center}
+  #ka-sticky .ka-sb1{background:#047857;color:#fff !important}
+  #ka-sticky .ka-sb2{background:#ECFDF5;color:#064E3B !important;border:2px solid #047857}
+  body.ka-sticky-on{padding-bottom:76px}
+}
+@media (prefers-reduced-motion:reduce){#ka-sticky,#ka-start .ka-start-grid a{transition:none}}
+
+/* Nov 10 2026: main buttons 44px */
+a.ui-button,button.ui-button{min-height:44px !important}
+
+/* Nov 10 2026: screen-reader-only text */
+.ka-sr{position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Nov 10 2026: header buttons - Refer a patient + Free fit call beside Check my coverage */
+.ka-navx{display:none}
+@media (min-width:1100px){
+  html body a.ka-navx{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:8px;font-weight:600;font-size:14px;line-height:1.2;white-space:nowrap;text-decoration:none;background:#fff;color:#065f46 !important;border:2px solid #047857;transition:background .15s}
+  html body a.ka-navx:hover{background:#ECFDF5}
+  html body a.ka-navx:focus-visible{outline:3px solid #065f46;outline-offset:2px}
+}
+
+/* Nov 10 2026: phones, open menu - keep site name from running under Check my coverage */
+@media (max-width:639px){html body [role=dialog] a.flex.items-center.gap-x-3{column-gap:.5rem !important;min-width:0;flex:1 1 auto;margin-right:.5rem} html body [role=dialog] a.flex.items-center.gap-x-3 p.font-sans.font-bold{font-size:20px !important;line-height:1.15 !important}}
+
+
+/* layout-jump fix Nov 12, 2026: make the header look the same before and after the site scripts run */
+div.px-6 > nav.justify-between > div.mx-auto.shrink-0{display:none!important}
+@media (min-width:1024px){div.px-6:has(> nav.justify-between):not(:has(> nav.ka-subnav)){padding-bottom:69px}}
+@media (max-width:767px){div.px-6 > nav.justify-between a.ui-button-nav:not(:has(.ka-cov-short)){font-size:0!important;padding:6px 8px!important;min-width:74px;justify-content:center}div.px-6 > nav.justify-between a.ui-button-nav:not(:has(.ka-cov-short))::before{content:"Coverage";font-size:12px}}
+
+/* KA pin + chart size v2 (Nov 13, 2026): pin found by alt text; share links centred under it; charts medium */
+html body .article-body > figure:has(img[alt^="Pinterest"]){max-width:300px!important;margin:2rem auto .5rem!important}
+html body .article-body > figure:has(img[alt^="Pinterest"]) img{width:100%!important;height:auto!important;border-radius:12px}
+html body .article-body > figure:has(img[alt^="Pinterest"]) + p{text-align:center!important;font-size:15px!important}
+html body .article-body > figure:not(:has(img[alt^="Pinterest"])){max-width:450px!important;margin:2rem auto!important}
+html body .article-body > figure:not(:has(img[alt^="Pinterest"])) img{width:100%!important;height:auto!important}
+/* Nov 15 2026: phone menu shows above page; badge tiles full size */
+#headlessui-portal-root{position:relative;z-index:2000}
+.ka-badgerow div[class*="aspect-"]{display:block!important}
+/* Nov 15 2026: home specialty icons mint + rounded (filter recolors the green image); Not Sure Where You Fit icon fits its column on phones */
+html body #main-content details.ka-fold div:has(> img[class*="aspect-[4/3]"]){width:120px!important;height:120px!important;max-width:120px!important;overflow:hidden!important;border-radius:16px!important;background:#047857!important;-webkit-clip-path:inset(0 round 16px);clip-path:inset(0 round 16px);-webkit-filter:grayscale(1) invert(1) contrast(5) invert(.202) sepia(.616) saturate(4.271) hue-rotate(270.1deg) sepia(.459) saturate(2.968) hue-rotate(181.1deg) brightness(1.335) contrast(.963);filter:grayscale(1) invert(1) contrast(5) invert(.202) sepia(.616) saturate(4.271) hue-rotate(270.1deg) sepia(.459) saturate(2.968) hue-rotate(181.1deg) brightness(1.335) contrast(.963)}
+html body #main-content details.ka-fold img[class*="aspect-[4/3]"]{border-radius:16px!important}
+@media (max-width:640px){html body #main-content .ka-iconcard>[class*="aspect-w"].max-h-44,html body #main-content .ka-iconcard>[class*="aspect-w"].max-h-44>*{width:44px!important;height:44px!important;max-height:44px!important}}
+/* Nov 16 2026: Who I Help - no icon on the Not Sure Where You Fit card (Kait). Other icons untouched. */
+html body #main-content .ka-iconcard>[class*="aspect-w"]:has(>img[alt^="Not sure where you fit"]){display:none!important}
+html body #main-content .ka-iconcard:has(>[class*="aspect-w"]>img[alt^="Not sure where you fit"]){display:block!important}
+/* Nov 16 2026: Free Guides - center the bottom "Get my free guides" button (Kait). */
+html body #cta div:has(>a[href="#ka-guides-form"]){justify-content:center!important}
+/* Nov 17 2026: Free Guides + download page - larger guide cards on desktop (Kait). */
+@media(min-width:1024px){html body #features:has(img[alt*="Low-Spoon Staples Guide"]) img{max-height:560px!important;height:auto!important;width:auto!important;max-width:100%!important;margin-left:auto!important;margin-right:auto!important}}
+
+/* Nov 20 2026: Blog listing white cards + white top band (Kait) */
+html body .listing-card,html body .listing-featured{background:#fff!important;border:1px solid #a7f3d0!important;box-shadow:0 2px 10px rgba(4,120,87,.08)!important;transition:box-shadow .2s,transform .2s}
+html body .listing-card:hover,html body .listing-featured:hover{box-shadow:0 6px 18px rgba(4,120,87,.16)!important;transform:translateY(-2px)}
+html body .listing-card-image{border-bottom:1px solid #d1fae5}
+html body .listing-header,html body .bs-box,html body .bs-status,html body .listing-filter-chips{position:relative}
+html body .listing-header::before,html body .bs-box::before,html body .bs-status::before,html body .listing-filter-chips::before{content:"";position:absolute;left:0;right:0;top:-40px;bottom:-40px;background:#fff;box-shadow:0 0 0 100vmax #fff;clip-path:inset(0 -100vmax);z-index:-1;pointer-events:none}
+html body .listing-filter-chips::before{bottom:-28px;border-bottom:1px solid #a7f3d0}
+
+/* Nov 20 2026: Blog post pages - white reading page + mint callouts (Kait) */
+html body .article-container--blog{background:#fff!important;border:1px solid #a7f3d0;border-radius:16px;box-shadow:0 2px 12px rgba(4,120,87,.07);margin-top:24px!important;margin-bottom:40px!important}
+html body .article-container--blog .article-callout{background:#ECFDF5!important;border-left:4px solid #047857!important;border-radius:10px!important}
+html body .article-container--blog .article-kv-list{background:#ECFDF5!important;border-color:#a7f3d0!important;border-radius:10px}
+html body .article-container--blog .article-sources{background:#ECFDF5!important;border-color:#a7f3d0!important;border-radius:10px;padding:1rem 1.25rem!important}
+@media(max-width:767px){html body .article-container--blog{border-radius:0;border-left:0;border-right:0;margin-top:0!important}}
+
+/* Nov 21 2026: One main button per service page (Business Admin plan, Kait). body.ka-svc is added by KA money v1 on service pages. Fit call = small text link under Check my coverage. Undo: delete this block. */
+.ka-svc #hero div.flex:has(>a[href*="calendly"]){flex-direction:column!important;align-items:flex-start!important;gap:.4rem!important}
+.ka-svc #hero a[href*="calendly"]:not(.ka-nb-p):not(#ka-nobook a){background:transparent!important;border:0!important;box-shadow:none!important;min-height:0!important;color:#047857!important;font-size:.95rem!important;font-weight:500!important;text-decoration:underline!important;text-underline-offset:3px;padding:0!important;transform:none!important}
+html body.ka-svc #ka-nobook a.ka-nb-p[href*="calendly"],html body.ka-svc a.ka-nb-p[href*="calendly"]{background:#fff!important;background-color:#fff!important;color:#047857!important;border:2px solid #047857!important}html body.ka-svc a.ka-nb-p[href*="calendly"] *{color:#047857!important}
+
+/* KA chip wrap v1 (Nov 22): long Jump-to chips wrap on phones instead of pushing the page wide */
+#main-content .ka-chips .ka-chip{white-space:normal!important;max-width:100%!important;min-width:0!important;height:auto!important;text-align:left}
+
+/* KA body text v1 (Nov 22, 2026, Kait): main body text matches the 30-second box (1.05rem = 16.8px, line height 1.7). Hero intro lines, captions, quote banners and headings keep their sizes. Undo: delete this block. */
+#main-content .prose-user.font-serif:not(h1):not(h2),#main-content .prose-user.font-serif:not(h1):not(h2) :is(p,li,span,strong,em,a,blockquote),#main-content .font-serif.text-lg:not(h1):not(h2),#main-content .font-serif.text-lg:not(h1):not(h2) > span,#main-content .font-serif.text-lg:not(h1):not(h2) > span :is(strong,em,a),#main-content .ka-qa-row dd{font-size:1.05rem !important;line-height:1.7 !important}
+
+/* KA one 30s title v1 (Nov 22): no divider on the lower ka-start panel when its repeated title is hidden */
+#main-content section.ka-start.ka-no30 .ka-start-r{border-top:0 !important;padding-top:0 !important;margin-top:0 !important}
