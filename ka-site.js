@@ -379,3 +379,26 @@ else a.classList.add("ka-il")});
 [].forEach.call(document.querySelectorAll(".ka-btn-row"),function(w){var n=w.nextElementSibling;while(n&&n.tagName==="P"&&n.querySelector("a.ka-btn")&&vis(n)===vis(n.querySelector("a.ka-btn"))){var x=n.nextElementSibling;w.appendChild(n);n=x}})}
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run);else run();
 setTimeout(run,1500);setTimeout(run,4000)})()}catch(e){console.warn("KA block 49",e)}
+
+/* KA blog product box v1 (Nov 24 2026, Kait OK): one matched product box on 9 posts, before the Fit Call section. Replaces #ka-wheel, #ka-fridge-line and #ka-wbbox on those posts only. */
+try{(function(){var m=location.pathname.match(/^\/blog\/([^\/?#]+)/);if(!m)return;var g=m[1];
+var P={
+swo:{id:'5IFCE',c:'start-with-one',img:'https://pe56d.s3.amazonaws.com/o_1k82vjnbi1e45kqhgsb68o1gqg29.png',alt:'Start With One workbook cover',e:'🍽️',k1:'Try this next',k2:'Start With One',meta:'$7 · 6 pages + 4 phone wallpapers · instant download',btn:'Get Start With One ($7)'},
+wheel:{id:'2vSKl',c:'wheel-kit',img:'https://pe56d.s3.amazonaws.com/o_1k833f30gnjf14p8qup15p8fq12b.png',alt:'Neurodivergent Nutrition Wheel Kit cover',e:'🎡',k1:'Try this next',k2:'The Neurodivergent Nutrition Wheel Kit',meta:'$14 · fill in on your phone or print it · instant download',btn:'Get the Wheel Kit ($14)'},
+road:{id:'4sMtL',c:'low-spoon-roadmap',img:'https://pe56d.s3.amazonaws.com/o_1k80te5ii1kha1ga51sas1t93rp21n.png',alt:'Low-Spoon Food Roadmap workbook cover',e:'🗺️',k1:'Want a full plan?',k2:'The Low-Spoon Food Roadmap',meta:'$29 · 28 pages, fillable + printable · instant download',btn:'Get the Roadmap ($29)'}};
+var S={
+'adhd-forgetting-to-eat':['swo',"Let's Put You Back",'Forgot to eat, and now nothing sounds good? Find one food that works right now.'],
+'why-is-it-so-hard-to-feed-myself':['swo','You Deserve Care That Works','Stuck on "what do I even eat"? Skip the meal. Find one food that works right now.'],
+'adhd-easy-meals':['wheel',"Let's Build Your Low-Spoon Plan",'Easy meals still hard to pick? Match how you feel right now to a food that fits.'],
+'hyperfixation-meal':['wheel',"You Don't Have to Figure Out",'Your go-to meal stopped working? Match how you feel right now to a food that fits.'],
+'arfid-safe-foods':['road','Your Safe Foods Are the Starting Point','Build easier eating around the foods you already trust, one step at a time.'],
+'safe-food-discontinued':['road','You Deserve Safe Foods','Want a backup plan before the next safe food changes? Find your sensory style and map out foods that fit it.'],
+'its-not-picky-eating-arfid-adults':['road',"Let's Work Together",'A plan that starts with your safe foods, not with "just try it." One step at a time.'],
+'best-foods-for-pots':['road',"Let's Build Your POTS Plan",'A low-spoon eating plan with POTS, EDS and MCAS callouts built in.'],
+'pots-breakfast-nausea':['road','You Are Not Broken','Mornings take the most spoons? Plan easier eating, with POTS, EDS and MCAS callouts built in.']};
+var r=S[g];if(!r)return;var p=P[r[0]];
+var s=document.createElement('style');s.id='ka-pbox-css';s.textContent='#ka-wheel,#ka-fridge-line,#ka-wbbox{display:none!important}#ka-pbox{display:flex;gap:18px;align-items:center;background:#ecfdf5;border:2px solid #047857;border-radius:16px;padding:18px;margin:2rem 0}#ka-pbox img{width:170px;flex-shrink:0;border-radius:10px;margin:0!important}#ka-pbox .k1{margin:0 0 4px!important;font-weight:700;color:#047857;font-size:.95rem}#ka-pbox .k2{margin:0 0 6px!important;font-family:"Fira Sans",sans-serif;font-weight:700;font-size:1.25rem;color:#064e3b;line-height:1.3}#ka-pbox .k3{margin:0 0 6px!important;line-height:1.6}#ka-pbox .k4{margin:0 0 12px!important;font-size:.95rem;color:#065f46}#ka-pbox a{display:inline-flex;align-items:center;min-height:44px;background:#047857;color:#fff!important;font-weight:700;border-radius:8px;padding:10px 18px;text-decoration:none!important}#ka-pbox a:hover{background:#065f46}@media(max-width:600px){#ka-pbox{flex-direction:column;align-items:stretch}#ka-pbox img{width:100%}#ka-pbox a{justify-content:center}}';document.head.appendChild(s);
+var u='https://payhip.com/b/'+p.id+'?utm_source=website&utm_medium=blog&utm_campaign='+p.c+'&utm_content='+g;
+function clean(){['ka-wheel','ka-fridge-line','ka-wbbox'].forEach(function(i){var e=document.getElementById(i);if(e&&e.parentNode)e.parentNode.removeChild(e)})}
+function place(){var b=document.querySelector('.article-body');if(!b)return false;var h=[].slice.call(b.querySelectorAll('h2')).filter(function(x){return x.textContent.indexOf(r[1])>-1})[0];if(!h)return false;var d=document.getElementById('ka-pbox');if(!d){d=document.createElement('aside');d.id='ka-pbox';d.setAttribute('aria-label',p.k2);d.innerHTML='<img src="'+p.img+'" alt="'+p.alt+'" loading="lazy"><div><p class="k1"><span class="ka-emo" aria-hidden="true">'+p.e+'</span> '+p.k1+'</p><p class="k2">'+p.k2+'</p><p class="k3">'+r[2]+'</p><p class="k4">'+p.meta+'</p><a href="'+u+'" data-ka-bl="1" data-ka-orig="'+u+'">'+p.btn+'</a></div>'}if(h.previousElementSibling!==d)h.parentNode.insertBefore(d,h);var a=d.querySelector('a');if(a.getAttribute('href')!==u)a.setAttribute('href',u);return true}
+var n=0,iv=setInterval(function(){clean();place();if(++n>60)clearInterval(iv)},300);})()}catch(e){console.warn("KA block pbox",e)}
